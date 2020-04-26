@@ -1,6 +1,7 @@
 
 ## 执行命令结果
-kubectl apply -f mandatory.yaml 
+## kubectl apply -f mandatory.yaml 
+```
 namespace/ingress-nginx created
 configmap/nginx-configuration created
 configmap/tcp-services created
@@ -11,10 +12,11 @@ role.rbac.authorization.k8s.io/nginx-ingress-role created
 rolebinding.rbac.authorization.k8s.io/nginx-ingress-role-nisa-binding created
 clusterrolebinding.rbac.authorization.k8s.io/nginx-ingress-clusterrole-nisa-binding unchanged
 error: unable to recognize "mandatory.yaml": no matches for kind "Deployment" in version "extensions/v1beta1"
-
+```
 
 ## 配置文件
-cat mandatory.yaml 
+mandatory.yaml 
+```
 apiVersion: v1
 kind: Namespace
 metadata:
@@ -277,3 +279,4 @@ spec:
             timeoutSeconds: 1
 
 ---
+```
